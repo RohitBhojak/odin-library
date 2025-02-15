@@ -38,7 +38,7 @@ submitButton.addEventListener("click", (event) => {
     const pages = document.querySelector("#pages").value;
     const status = document.querySelector("#status").checked;
 
-    myLibrary.push(new book(title, author, pages, status));
+    myLibrary.push(new Book(title, author, pages, status));
     addBookForm.reset();
     displayBooks();
     addBookModal.close();
@@ -61,16 +61,17 @@ cardContainer.addEventListener("click", (event) => {
 })
 
 // book constructor
-function book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-}
+class Book {
+    constructor(title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
 
-// protoype functions
-book.prototype.toggleStatus = function() {
-    this.status = !this.status;
+    toggleStatus() {
+        this.status = !this.status;
+    }
 }
 
 // functions
@@ -108,10 +109,10 @@ function toggleReadStatus(index) {
 }
 
 // test
-const book1 = new book("The Great Gatsby", "F. Scott Fitzgerald", 180, false);
-const book2 = new book("To Kill a Mockingbird", "Harper Lee", 281, false);
-const book3 = new book("No Longer Human", "Osamu Dazai", 304, true);
-const book4 = new book("Flowers for Algernon", "Daniel Keyes", 272, true);
-const book5 = new book("The Shining", "Stephen King", 447, false);
+const book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, false);
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 281, false);
+const book3 = new Book("No Longer Human", "Osamu Dazai", 304, true);
+const book4 = new Book("Flowers for Algernon", "Daniel Keyes", 272, true);
+const book5 = new Book("The Shining", "Stephen King", 447, false);
 myLibrary.push(book1, book2, book3, book4, book5);
 displayBooks();
