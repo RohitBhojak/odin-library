@@ -18,6 +18,10 @@
     --shadow: 5px 5px 5px rgba(255, 255, 255, 0.2);
 }
 
+html {
+    font-size: 62.5%;
+}
+
 .svg.dark {
     filter: invert(100%);
 }
@@ -27,7 +31,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-size: 62.5%;
     text-decoration: none;
 }
 
@@ -57,7 +60,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 6rem;
+    font-size: 2rem;
 }
 
 #theme-icon {
@@ -95,13 +98,14 @@ body {
     gap: 20px;
 }
 
+
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
     border-radius: 5px;
-    font-size: 3.2rem;
+    font-size: 2rem;
     gap: 10px;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     box-shadow: var(--shadow);
@@ -127,7 +131,7 @@ button.read {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.8rem;
+    font-size: 1.6rem;
     gap: 20px;
 }
 
@@ -146,11 +150,12 @@ dialog {
 }
 
 dialog form {
+    width: 300px;
     padding: 20px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    font-size: 3.2rem;
+    font-size: 2rem;
     gap: 10px;
 }
 
@@ -160,7 +165,7 @@ dialog form label {
 }
 
 dialog form .status-container {
-    font-size: 3.2rem;
+    font-size: 2rem;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -174,6 +179,7 @@ dialog form .status-container label {
 
 dialog form input {
     padding: 10px;
+    font-size: 2rem;
     border-radius: 5px;
 }
 

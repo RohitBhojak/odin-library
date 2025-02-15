@@ -83,7 +83,7 @@ function displayBooks()  {
         card.classList.add("card");
         card.setAttribute("data-index", myLibrary.indexOf(book));
         card.innerHTML = `
-            <h2>${book.title}</h2>
+            <h4>${book.title}</h4>
             <p>Author: ${book.author}</p>
             <p>Pages: ${book.pages}</p>
             <button class="status ${book.status? "read": ""}">${book.status ? "Read" : "Not read"}</button>
